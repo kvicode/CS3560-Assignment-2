@@ -1,6 +1,7 @@
 package cs3560_Assignment2;
 
 
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -196,13 +197,18 @@ public class UserView extends javax.swing.JFrame implements Observer {
         }
     }
 
-
+    public void displayUserInformation(User user) {
+        System.out.println("Creation Time: " + user.getCreationTime());
+        }
+  
     @Override
     public void update(Observable o, Object arg) {
         if (arg instanceof List) {
         }
     }
 
+    public void displayGroupInformation(Group group) {
+        System.out.println("Creation Time: " + group.getCreationTime());
+        }
 
 }
-

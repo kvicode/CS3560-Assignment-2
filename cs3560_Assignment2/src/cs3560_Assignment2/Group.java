@@ -1,11 +1,13 @@
 package cs3560_Assignment2;
 
+
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.tree.DefaultMutableTreeNode;
 
 
 public class Group implements Tree {
+    private long creationTime;
 	private boolean target;
     private String SSID;
     private List<User> GroupGroupUsers = new ArrayList();
@@ -16,6 +18,7 @@ public class Group implements Tree {
      public Group() {
     	root = new DefaultMutableTreeNode("Root");
         GroupCount++;
+        this.creationTime = System.currentTimeMillis();
     }
      public Group(String SSID) {
         this(SSID, true);
@@ -48,6 +51,15 @@ public class Group implements Tree {
     @Override
     public String toString() {
         return SSID;
+    }
+
+    
+    public long getCreationTime() {
+        return creationTime;
+    }
+    
+    public void setCreationTime(long creationTime) {
+        this.creationTime = creationTime;
     }
     
 }

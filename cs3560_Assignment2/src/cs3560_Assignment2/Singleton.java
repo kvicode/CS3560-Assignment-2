@@ -1,5 +1,7 @@
 package cs3560_Assignment2;
 
+
+
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
@@ -30,6 +32,7 @@ public class Singleton extends javax.swing.JFrame {
     Group group = new Group();
     private DefaultMutableTreeNode root = new DefaultMutableTreeNode(group.getRoot());
     private DefaultTreeModel model = new DefaultTreeModel(root);
+    VisitorButtonStats visitorButtonStats = new VisitorButtonStats();
     private javax.swing.JButton addGroupButton;
     private javax.swing.JButton addUserButton;
     private javax.swing.JTextArea groupIDTextArea;
@@ -248,7 +251,7 @@ public class Singleton extends javax.swing.JFrame {
                     }
                 }
             } else {
-                JOptionPane.showMessageDialog(null, "This exists ", "Add User Error", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(null, "This exists already ", "Add User Error", JOptionPane.INFORMATION_MESSAGE);
             }
         }
         model.reload(root);
@@ -284,7 +287,7 @@ public class Singleton extends javax.swing.JFrame {
                     }
                 }
             } else {
-                JOptionPane.showMessageDialog(null, "This exists bruh.", "Add Group Error", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(null, "This exists already", "Add Group Error", JOptionPane.INFORMATION_MESSAGE);
             }
         }
         model.reload(root);
@@ -382,3 +385,4 @@ public class Singleton extends javax.swing.JFrame {
 
   
 }
+

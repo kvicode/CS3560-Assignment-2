@@ -4,6 +4,7 @@ import java.util.*;
 
 
 public class User extends Observable implements Tree, Observer {
+    private long creationTime;
     private String ID;
     private List<String> following;
     private List<String> tweets;
@@ -113,4 +114,17 @@ public class User extends Observable implements Tree, Observer {
 		newsFeed.add(msg);
 	}
 
+
+    public User() {
+        this.creationTime = System.currentTimeMillis();
+    }
+    
+    public long getCreationTime() {
+        return creationTime;
+    }
+    
+    public void setCreationTime(long creationTime) {
+        this.creationTime = creationTime;
+    }
+    
 }
